@@ -99,74 +99,41 @@ The database automatically updates whenever a new invoice is processed.
 - **Prophet / scikit-learn** → Predictions and forecasting
 
 ---
+##Project Folder Structure
 
 invoice_system/
-│
-├── data/                  # Store invoice PDF files
-│
-├── db/                    # Database files
-│   └── orders.db
-│
-├── scripts/               # Core Python scripts
-│   ├── parse_invoice.py   # Extracts data from invoices
-│   ├── db.py              # Database helper functions
-│   ├── etl.py             # End-to-end processing pipeline
-│   ├── predict.py         # Forecasting & prediction models
-│   └── dashboard.py       # Optional Streamlit dashboard
-│
-├── notebooks/             # Jupyter notebooks for analysis
-│
-├── requirements.txt       # Python dependencies
-│
-└── README.md              # Project documentation
+├── data/ # Store invoice PDF files
+├── db/ # Database files
+│ └── orders.db
+├── scripts/ # Core Python scripts
+│ ├── parse_invoice.py # Extracts data from invoices
+│ ├── db.py # Database helper functions
+│ ├── etl.py # End-to-end processing pipeline
+│ ├── predict.py # Forecasting & prediction models
+│ └── dashboard.py # Optional Streamlit dashboard
+├── notebooks/ # Jupyter notebooks for analysis
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
 
 ---
 
-+-------------------+
-          |   Invoice PDF     |
-          +-------------------+
-                   |
-                   v
-          +-------------------+
-          |   PDF Parsing     |
-          | (extract data)    |
-          +-------------------+
-                   |
-                   v
-          +-------------------+
-          | Database Update   |
-          | - Customers       |
-          | - Products        |
-          | - Orders          |
-          | - Order Items     |
-          +-------------------+
-                   |
-         ---------------------
-         |                   |
-         v                   v
-+-------------------+   +-------------------+
-| Historical Orders |   | Reporting &       |
-| Viewer            |   | Analytics         |
-+-------------------+   | - Summaries       |
-                        | - Charts          |
-                        | - Forecasts       |
-                        +-------------------+
+##System Workflow
+Invoice PDF
+           |
+           v
+      PDF Parsing
+           |
+           v
+      Database Update
+   (Customers, Products,
+    Orders, Order Items)
+           |
+      -----------------
+      |               |
+      v               v
+Historical Orders   Reporting & Analytics
+   Viewer         (Summaries, Charts,
+                   Forecasts)
 
 
 ---
-
-[New Invoice Folder]
-        |
-        v
-[Folder Monitor Service] (detects new PDFs)
-        |
-        v
-[ETL Pipeline] (parse & update DB)
-        |
-        +----------------+
-        |                |
-        v                v
-[Dashboard Update]   [Prediction Models]
-        |                |
-        v                v
-[Interactive Reports]   [Demand Forecasts]
