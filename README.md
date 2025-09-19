@@ -76,7 +76,6 @@ The database automatically updates whenever a new invoice is processed.
 - Maintains a structured historical record of all orders.
 - Provides insights into customer behavior and product trends.
 - Enables forecasting and data-driven decision-making.
-- Fully open-source and customizable to your business needs.
 
 ---
 
@@ -98,13 +97,6 @@ The database automatically updates whenever a new invoice is processed.
 - **pandas / matplotlib / seaborn** → Data processing and visualization
 - **Streamlit** → Interactive dashboard (optional)
 - **Prophet / scikit-learn** → Predictions and forecasting
-
----
-
-It is:
-- Capable of tracking customers, products, and orders automatically.
-- Equipped with historical data analysis, visualizations, and sales forecasts.
-- Ready for expansion with dashboards, alerts, and advanced analytics.
 
 ---
 
