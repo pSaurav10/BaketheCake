@@ -100,7 +100,7 @@ The database automatically updates whenever a new invoice is processed.
 
 ---
 ##Project Folder Structure
-
+```
 invoice_system/
 ├── data/ # Store invoice PDF files
 ├── db/ # Database files
@@ -114,10 +114,11 @@ invoice_system/
 ├── notebooks/ # Jupyter notebooks for analysis
 ├── requirements.txt # Python dependencies
 └── README.md # Project documentation
-
+```
 ---
 
 ##System Workflow
+```
 Invoice PDF
            |
            v
@@ -134,6 +135,6 @@ Invoice PDF
 Historical Orders   Reporting & Analytics
    Viewer         (Summaries, Charts,
                    Forecasts)
-
+```
 
 ---
